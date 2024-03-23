@@ -7,11 +7,13 @@ To Develop a convolutional deep neural network for digit classification and to v
 Digit classification and to verify the response for scanned handwritten images.
 
 The MNIST dataset is a collection of handwritten digits. The task is to classify a given image of a handwritten digit into one of 10 classes representing integer values from 0 to 9, inclusively. The dataset has a collection of 60,000 handwrittend digits of size 28 X 28. Here we build a convolutional neural network model that is able to classify to it's appropriate numerical value.
-![314443601-e55e3f96-8070-4a76-9e35-5ec689b23ee9](https://github.com/Afsarjumail/mnist-classification/assets/118343395/93bf33a6-cfe9-4eb7-b235-0554663d5992)
+
+![315289634-93bf33a6-cfe9-4eb7-b235-0554663d5992](https://github.com/Yuva2005raj/mnist-classification/assets/118343998/5d97cc66-8ea3-4011-a532-7fe59349bd53)
 
 
 ## Neural Network Model
-![314443687-aaf365b0-104c-403d-b000-d995e28bc4a1](https://github.com/Afsarjumail/mnist-classification/assets/118343395/7c45c217-fc67-408e-bbb9-17fa170c8579)
+
+![315289567-7c45c217-fc67-408e-bbb9-17fa170c8579](https://github.com/Yuva2005raj/mnist-classification/assets/118343998/b8da993a-b311-4b29-839a-2865a4be8c5e)
 
 ## DESIGN STEPS
 
@@ -117,20 +119,20 @@ model.fit(X_train_scaled ,y_train_onehot, epochs=8,batch_size=128, validation_da
 metrics = pd.DataFrame(model.history.history)
 metrics.head()
 
-plt.title("AFSAR JUMAIL S 212222240004")
+plt.title("YUVARAJ B 212222230182")
 metrics[['accuracy','val_accuracy']].plot()
 
-plt.title("AFSAR JUMAIL S 212222240004")
+plt.title("YUVARAJ B 212222230182")
 metrics[['loss','val_loss']].plot()
 ```
 ```
 ## Test the model for your handwritten scanned images.
 x_test_predictions = np.argmax(model.predict(X_test_scaled), axis=1)
 
-print("AFSAR JUMAIL S 212222240004")
+plt.title("YUVARAJ B 212222230182")
 print(confusion_matrix(y_test,x_test_predictions))
 
-print("AFSAR JUMAIL S 212222240004")
+plt.title("YUVARAJ B 212222230182")
 print(classification_report(y_test,x_test_predictions))
 ```
 ```
@@ -150,7 +152,7 @@ x_single_prediction = np.argmax(
 
 print(x_single_prediction)
 
-print("AFSAR JUMAIL S 212222240004")
+plt.title("YUVARAJ B 212222230182")
 plt.imshow(img_28_gray_scaled.reshape(28,28),cmap='gray')
 
 img_28_gray_inverted = 255.0-img_28_gray
@@ -160,7 +162,7 @@ x_single_prediction = np.argmax(
     model.predict(img_28_gray_inverted_scaled.reshape(1,28,28,1)),
      axis=1)
 
-print("AFSAR JUMAIL S 212222240004")
+plt.title("YUVARAJ B 212222230182")
 print(x_single_prediction)
 ```
 
@@ -169,22 +171,23 @@ print(x_single_prediction)
 ## OUTPUT
 
 ### Training Loss, Validation Loss Vs Iteration Plot
-![GRAPH1](https://github.com/Afsarjumail/mnist-classification/assets/118343395/f4dcee4a-a5d1-4c86-83bb-c024b4a2357b)
-![GRAPH](https://github.com/Afsarjumail/mnist-classification/assets/118343395/876a0a58-9681-43ae-a387-d3a8d344d4cc)
+![Screenshot 2024-03-23 131709](https://github.com/Yuva2005raj/mnist-classification/assets/118343998/f5ec2914-bc8e-4884-9673-5abf218291a2)
+
+![Screenshot 2024-03-23 141523](https://github.com/Yuva2005raj/mnist-classification/assets/118343998/50653834-d54b-41d4-a435-beb4b767328e)
 
 
 
 ### Classification Report
+![Screenshot 2024-03-23 141615](https://github.com/Yuva2005raj/mnist-classification/assets/118343998/84e27404-10cf-4c16-a32a-5c0dccb77105)
 
-![CREPORT](https://github.com/Afsarjumail/mnist-classification/assets/118343395/f8fd7a3d-da28-46af-9343-bb52e8f2886d)
 
 ### Confusion Matrix
+![Screenshot 2024-03-23 141603](https://github.com/Yuva2005raj/mnist-classification/assets/118343998/31b05dcd-1b46-49e7-bd83-2e7cb6270786)
 
-![MATRIX](https://github.com/Afsarjumail/mnist-classification/assets/118343395/4b2f4065-4cbd-45fe-948f-1ba52a618bd6)
 
 ### New Sample Data Prediction
+![Screenshot 2024-03-23 141650](https://github.com/Yuva2005raj/mnist-classification/assets/118343998/a002f70d-6208-4717-a2b1-82409485e166)
 
-![OUT9](https://github.com/Afsarjumail/mnist-classification/assets/118343395/6ce8feeb-bf7d-45c6-997b-b22cee1a5299)
 
 
 ## RESULT
